@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="5dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/blue"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="4dp">
+
+    <ImageView
+        android:src="@drawable/gradient_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/event_image"
+            android:src="@drawable/ic_launcher_foreground"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/border"
+            tools:src="@tools:sample/avatars"/>
+
+        <TextView
+            android:id="@+id/text_place_name"
+            android:layout_width="190dp"
+            android:layout_height="28dp"
+            android:minWidth="70dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="13dp"
+            android:layout_toStartOf="@+id/profile_button"
+            android:layout_toEndOf="@+id/event_image"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/name"
+            android:textColor="#ffff"
+            android:textSize="22sp"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="@tools:sample/cities"/>
+
+        <!--<TextView
+            android:id="@+id/text_verify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_email"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/profile_button"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="18dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Email is not verified"
+            android:textColor="#ffff"
+            android:textSize="12sp"/>-->
+
+
+        <TextView
+            android:id="@+id/text_address"
+            android:layout_width="190dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/text_place_name"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginEnd="13dp"
+            android:layout_toStartOf="@+id/profile_button"
+            android:layout_toEndOf="@+id/event_image"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/address"
+            android:textColor="#ffff"
+            android:textSize="16sp"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:maxLines="2"
+            tools:text="@tools:sample/lorem/random"/>
+
+        <TextView
+            android:id="@+id/text_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_below="@+id/text_address"
+            android:layout_toEndOf="@+id/event_image"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/rating"
+            android:textColor="#ffff"
+            android:textSize="16sp" />
+
+        <!--<ImageView
+            android:id="@+id/star1"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="12dp"
+            android:layout_below="@+id/text_rating"
+            android:layout_toEndOf="@+id/event_image"
+            android:src="@drawable/ic_round_star_outline_24"
+            tools:ignore="UnknownIdInLayout" />
+
+        <ImageView
+            android:id="@+id/star2"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_below="@+id/text_rating"
+            android:layout_toEndOf="@+id/star1"
+            android:src="@drawable/ic_round_star_outline_24"/>
+
+        <ImageView
+            android:id="@+id/star3"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_below="@+id/text_rating"
+            android:layout_toEndOf="@+id/star2"
+            android:src="@drawable/ic_round_star_outline_24"/>
+
+        <ImageView
+            android:id="@+id/star4"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_below="@+id/text_rating"
+            android:layout_toEndOf="@+id/star3"
+            android:src="@drawable/ic_round_star_outline_24"/>
+
+        <ImageView
+            android:id="@+id/star5"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_below="@+id/text_rating"
+            android:layout_toEndOf="@+id/star4"
+            android:src="@drawable/ic_round_star_outline_24"/>-->
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/rating"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_rating"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/event_image"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:stepSize="0.1"
+            android:theme="@style/RatingBar" />
+
+        <ImageView
+            android:id="@+id/profile_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/arrow_white"/>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+</androidx.cardview.widget.CardView>

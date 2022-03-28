@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserDashboardFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="User Dashboard"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/button_profile"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/profile_background"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:src="@drawable/ic_launcher_foreground"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="18dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/white" />
+
+            <TextView
+                android:id="@+id/text_fullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="18dp"
+                android:layout_toEndOf="@+id/profile_image"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/name"
+                android:textColor="#ffff"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:id="@+id/text_email"
+                android:layout_width="205dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_fullName"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_toStartOf="@+id/profile_button"
+                android:layout_toEndOf="@+id/profile_image"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/email"
+                android:textColor="#ffff"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text_verify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_email"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/profile_button"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="18dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Email is not verified"
+                android:textColor="#ffff"
+                android:textSize="12sp"/>
+
+
+            <ImageView
+                android:id="@+id/profile_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/arrow_white"/>
+
+        </RelativeLayout>
+
+        <!--<Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:drawableEnd="@drawable/arrow_dark"
+            android:drawablePadding="10dp"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="24dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="24dp"
+            android:text="Change Password"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:background="?android:attr/selectableItemBackground"/>
+
+        <Button
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_beenhere_24"
+            android:drawableEnd="@drawable/arrow_dark"
+            android:drawablePadding="10dp"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="24dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="24dp"
+            android:text="Reservations"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+
+        <Button
+            style="?borderlessButtonStyle"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_round_app_blocking_24"
+            android:drawableEnd="@drawable/arrow_dark"
+            android:drawablePadding="10dp"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="24dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="24dp"
+            android:text="Deactivate Account"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+
+        <Button
+            style="?borderlessButtonStyle"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_round_login_24"
+            android:drawableEnd="@drawable/arrow_dark"
+            android:drawablePadding="10dp"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="24dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="24dp"
+            android:text="Log Out"
+            android:textAllCaps="false"
+            android:textSize="20sp" />-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Options"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/button_change_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:padding="20dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/icon_ar"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_baseline_lock_24"
+                android:layout_centerVertical="true">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/icon_ar"
+                android:text="Change Password"
+                android:textColor="#202020"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_dark">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/button_change_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/icon_email"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_baseline_email_24"
+                android:layout_centerVertical="true">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/icon_email"
+                android:text="Change Email"
+                android:textColor="#202020"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_dark">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/button_reservations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/icon_set"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_baseline_beenhere_24">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/icon_set"
+                android:text="Reservations"
+                android:textColor="#202020"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_dark">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/button_deactivate_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/icon_sh"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_round_app_blocking_24">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/icon_sh"
+                android:text="Deactivate Account"
+                android:textColor="#202020"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_dark">
+
+            </ImageView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/button_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="22dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingEnd="20dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/icon_ser"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_logout_white_24dp"
+                app:tint="@color/blue">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="14dp"
+                android:layout_toEndOf="@id/icon_ser"
+                android:text="@string/log_out"
+                android:textColor="#202020"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_dark">
+
+            </ImageView>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

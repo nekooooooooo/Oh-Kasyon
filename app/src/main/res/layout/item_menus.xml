@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:background="#FAFAFA">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/text_menu_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Name"
+            android:textColor="@color/blue"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/text_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_menu_name"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Price"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:maxLines="20"/>
+
+        <TextView
+            android:id="@+id/text_dishes_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_price"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Dishes"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:maxLines="20"/>
+
+        <TextView
+            android:id="@+id/text_dishes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_dishes_title"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Placeholder dishes"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:maxLines="20"/>
+
+        <TextView
+            android:id="@+id/text_drinks_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_dishes"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Drinks"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:maxLines="20"/>
+
+        <TextView
+            android:id="@+id/text_drinks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_drinks_title"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Placeholder drinks"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:maxLines="20"/>
+
+        <TextView
+            android:id="@+id/text_desserts_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_drinks"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Desserts"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:maxLines="20"/>
+
+        <TextView
+            android:id="@+id/text_desserts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_desserts_title"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Placeholder drinks"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:maxLines="20"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_image_1"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_below="@id/text_desserts"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="15dp">
+
+            <ImageView
+                android:id="@+id/image_food_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_launcher_foreground"
+                android:visibility="visible"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_image_2"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_below="@id/text_desserts"
+            android:layout_toEndOf="@id/card_image_1"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="15dp">
+
+            <ImageView
+                android:id="@+id/image_food_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_launcher_foreground"
+                android:visibility="visible"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_image_3"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_below="@id/text_desserts"
+            android:layout_toEndOf="@id/card_image_2"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="15dp">
+
+            <ImageView
+                android:id="@+id/image_food_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_launcher_foreground"
+                android:visibility="visible"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/image_food_4"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_below="@id/text_desserts"
+            android:layout_toEndOf="@id/card_image_3"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="20dp"
+            android:src="@drawable/ic_baseline_more_horiz_24"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/light_grey"/>
+
+</RelativeLayout>

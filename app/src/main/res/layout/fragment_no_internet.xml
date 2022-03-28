@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NoInternetFragment"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_round_signal_wifi_connected_no_internet_4_24"
+            app:tint="@color/grey"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Oh no!"
+            android:textSize="25sp"
+            android:textColor="@color/dark_grey"
+            android:fontFamily="@font/roboto_bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Slow or no internet connection.\nPlease check your internet settings"
+            android:textAlignment="center"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:padding="15dp"
+            android:text="Pull Down to Refresh"
+            android:textSize="15sp"
+            android:background="@drawable/button_login_background"
+            android:textColor="@color/white"/>
+
+
+</LinearLayout>

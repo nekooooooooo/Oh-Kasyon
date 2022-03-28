@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient_background">
+
+    <RelativeLayout
+        android:id="@+id/toolbarMainMenu"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/oh_kasyon_splash" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:src="@drawable/ic_launcher_foreground"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_alignParentEnd="true"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/white"
+                android:color="?android:colorControlHighlight"/>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/toolbarMainMenu"
+        android:background="@color/orange" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/no_internet_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tabLayout"
+        android:layout_below="@id/divider">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:name="com.ljanangelo.oh_kasyon.NoInternetFragment"
+            android:id="@+id/no_internet_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/tabLayout"
+        android:layout_below="@id/divider"
+        android:background="@drawable/gradient_background_white" />
+
+    <View
+        android:id="@+id/divider_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/viewPager"
+        android:background="@color/orange" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        android:layout_alignParentBottom="true"
+        app:tabIndicatorColor="@color/orange"
+        app:tabSelectedTextColor="@color/orange"/>
+
+</RelativeLayout>

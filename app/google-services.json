@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "81723234747",
+    "project_id": "oh-kasyon",
+    "storage_bucket": "oh-kasyon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81723234747:android:91632c3586d81ee4678c9e",
+        "android_client_info": {
+          "package_name": "com.ljanangelo.oh_kasyon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "81723234747-auhnae3c1j84om6k3i2klfb0qllni62t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8tcEeI0Om9objgLd-MWzzdQPxKRsQtk8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "81723234747-auhnae3c1j84om6k3i2klfb0qllni62t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
